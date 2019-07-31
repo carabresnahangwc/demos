@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cara B.</title>
+        <link rel="stylesheet" type="text/css" href="aboutme_style.css">
+    </head>
+    <body>
+        <h1>Cara Bresnahan</h1>
+        <!--USing a button with JS -->
+        <button onclick="get_date();">Click for Date!</button>
+        <p id="getdate"></p>
+        <br><br>
+
+        <p>About me: I like goats!</p>
+
+        <button onclick="button_pic()">Click show/hide Aidan!</button>
+        <img id="showpic" src="aidan.jpg" style="display:none;"/>
+
+
+
+
+        <h1>Photos</h1>
+
+        <div style="text-align:center">
+          <h2>Tabbed Image Gallery from Utah!</h2>
+          <p>Click on the images below:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="cara_bresnahan.jpg" alt="Posing at Bryce Canyon" style="width:100%" onclick="expand_img(this);">
+          </div>
+          <div class="column">
+            <img src="jem1.jpg" alt="Eating at the Camp Site" style="width:100%" onclick="expand_img(this);">
+          </div>
+          <div class="column">
+            <img src="jem8.jpg" alt="My frinds by the Buttes" style="width:100%" onclick="expand_img(this);">
+          </div>
+          <div class="column">
+            <img src="jem10.jpg" alt="Agne" style="width:100%" onclick="expand_img(this);">
+          </div>
+        </div>
+        <div class="container">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <img id="expandedImg" style="width:100%">
+          <div id="imgtext"></div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="aboutme.js"></script>
+</html>
