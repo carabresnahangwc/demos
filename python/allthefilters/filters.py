@@ -85,3 +85,22 @@ def invert(image):
     newim = Image.new("RGB", image.size) #creating a blank canvas
     newim.putdata(new_pixels)# coloring the picture
     return newim
+
+def greyscale(image):
+    print("Greyscale")
+
+    # Load the pixel data from im.
+    pixels = image.getdata()
+    # Create a list to hold the new image pixel data.
+    new_pixels = []
+
+    # Process the pixels in the image.
+    for p in pixels:
+        grey = (p[0]+p[1]+p[2])/3
+        grey = math.trunc(grey)
+        new_pixels.append((grey, grey, grey))
+
+    # Make the new filtered image
+    newimage = Image.new("RGB", image.size) #creating a blank canvas the same size as our original image
+    newimage.putdata(new_pixels)#color the empty image
+    return newimage
